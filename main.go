@@ -6,5 +6,7 @@ func main() {
 	displayNumbers()
 	formatStrings()
 	handleArrays()
-
+	stringsLib()
+	numLib()
+	numLoops()
 }

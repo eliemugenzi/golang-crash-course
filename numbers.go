@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 func displayNumbers() {
 	// Integers
 	var age1 int = 20
@@ -19,4 +22,27 @@ func displayNumbers() {
 	var float1 float32 = 25.98 /* Floats */
 	var float2 float64 = 333.4424545454
 	fmt.Println(num1, num2, num3, num4, num5, float1, float2)
+}
+
+func numLib() {
+	ages:= []int {1, 22, 443, 11, 60, 44}
+	sort.Ints(ages)
+	fmt.Println(ages)
+
+	index:= sort.SearchInts(ages, 22)
+
+	fmt.Println(index)
+}
+
+func numLoops() {
+	x:= 0
+
+	for x < 5 {
+		fmt.Println("The Power of X=", x)
+		x+=1
+	}
+
+	for i := 0; i < 5; i++ {
+		fmt.Println("The value of i=", i)
+	}
 }
