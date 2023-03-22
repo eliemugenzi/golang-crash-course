@@ -39,15 +39,33 @@ func stringsLib() {
 	fmt.Println(names)
 	fmt.Println(sort.SearchStrings(names, "Vondelle"))
 
+	// Loops
 	for i := 0; i < len(names); i++ {
 		fmt.Println(names[i])
 	}
 
 	for index, value := range names {
+		if index == 1 {
+          fmt.Println("Let's skip this one")
+		  continue
+		}
+
+		if index == 2 {
+			fmt.Println("Let's take a break")
+			break
+		}
 		fmt.Println(index, value)
 	}
 
 	for _, value := range names {
 		fmt.Println(value)
+	}
+
+	
+}
+
+func cycleNames(n [] string, f func(string)) {
+	for _, val:= range n {
+		f(val)
 	}
 }
