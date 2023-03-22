@@ -27,4 +27,6 @@ func main() {
 
 	fmt.Println(value0, value1)
 	fmt.Println(value2, value3)
+
+	handleMaps()
 }
