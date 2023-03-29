@@ -29,4 +29,15 @@ func main() {
 	fmt.Println(value2, value3)
 
 	handleMaps()
+	handlePointers()	
+	myBill := newBill("Elie's Bill")
+	myBill.updateTip(20)
+	myBill.addItem("biscuit", 4.99)
+	myBill.addItem("Capuccino", 2.99)
+	fmt.Println(myBill.format())
+
+	userBill := createBill()
+	fmt.Println(userBill)
+
+	promptOptions(userBill)
 }
