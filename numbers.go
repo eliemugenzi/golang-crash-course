@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"sort"
 )
 func displayNumbers() {
@@ -45,4 +46,38 @@ func numLoops() {
 	for i := 0; i < 5; i++ {
 		fmt.Println("The value of i=", i)
 	}
+}
+
+type Shape interface {
+	getArea() float64
+	getCircumference() float64
+}
+
+type Square struct {
+	length float64
+}
+
+type Circle struct {
+	radius float64
+}
+
+func (square Square) getArea() float64 {
+   return math.Pow(square.length, 2)
+}
+
+func (circle Circle) getArea() float64 {
+  return math.Pi * math.Pow(circle.radius, 2)
+}
+
+func (square Square) getCircumference() float64 {
+   return square.length * 4
+}
+
+func (circle Circle) getCircumference() float64 {
+   return 2 * math.Pi * circle.radius
+}
+
+func printShapeInfo(shape Shape) {
+	fmt.Printf("Area of %T is %0.2f \n", shape, shape.getArea())
+	fmt.Printf("The circumference of %T is %0.2f\n", shape, shape.getCircumference())
 }

@@ -40,4 +40,16 @@ func main() {
 	fmt.Println(userBill)
 
 	promptOptions(userBill)
+
+	shapes := [] Shape {
+		Square { length: 15.2 },
+		Circle {radius: 20},
+		Circle {radius: 20.8},
+		Square{length: 19.7},
+	}
+
+	for _, v := range shapes {
+		printShapeInfo(v)
+		fmt.Println("----")
+	}
 }
